@@ -26,17 +26,17 @@ type RequestArgs struct {
 type Bind map[string]interface{}
 
 type QueryArgs struct {
-    query string
-    bindings Bind
-    rebindings Bind
+    Query string
+    Bindings Bind
+    Rebindings Bind
 }
 
 func Query(query QueryArgs) *Request {
     args := &RequestArgs{
-        Gremlin: query.query,
+        Gremlin: query.Query,
         Language: "gremlin-groovy",
-        Bindings: query.bindings,
-        Rebindings: query.rebindings,
+        Bindings: query.Bindings,
+        Rebindings: query.Rebindings,
     }
 
     uid, err := uuid.NewV4()
