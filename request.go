@@ -41,6 +41,10 @@ func Query(query QueryArgs) *Request {
 
     uid, err := uuid.NewV4()
 
+    if err != nil {
+        return nil
+    }
+
     id := uid.String()
 
     rId := map[string]string{"@type": "g:UUID", "@value": id}
