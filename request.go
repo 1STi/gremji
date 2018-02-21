@@ -39,7 +39,9 @@ func Query(query QueryArgs) *Request {
         Rebindings: query.rebindings,
     }
 
-    id := uuid.NewV4().String()
+    uid, err := uuid.NewV4()
+
+    id := uid.String()
 
     rId := map[string]string{"@type": "g:UUID", "@value": id}
 
