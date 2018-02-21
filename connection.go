@@ -11,10 +11,9 @@ import (
 type Client struct {
     Remote *url.URL
     Ws *websocket.Conn
-    Auth []OptAuth
 }
 
-func NewClient(urlStr string, options ...OptAuth) (*Client, error) {
+func NewClient(urlStr string) (*Client, error) {
     r, err := url.Parse(urlStr)
     if err != nil {
         return nil, err
@@ -27,7 +26,7 @@ func NewClient(urlStr string, options ...OptAuth) (*Client, error) {
         return nil, err
     }
 
-    return &Client{r,ws,options}, nil
+    return &Client{r,ws}, nil
 }
 
 func (c *Client) ExecQuery(query QueryArgs) (*Response, error) {
