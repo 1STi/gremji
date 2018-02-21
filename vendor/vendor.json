@@ -1,0 +1,27 @@
+{
+	"comment": "",
+	"ignore": "test",
+	"package": [
+		{
+			"checksumSHA1": "hEnH6sgR83Qfx7UNnphNNlelmj0=",
+			"path": "github.com/gorilla/websocket",
+			"revision": "ea4d1f681babbce9545c9c5f3d5194a789c89f5b",
+			"revisionTime": "2017-06-20T19:01:03Z",
+			"version": "v1.2.0",
+			"versionExact": "v1.2.0"
+		},
+		{
+			"checksumSHA1": "+nVM+CEZGAopOrYlLifgWP+X01E=",
+			"path": "github.com/satori/go.uuid",
+			"revision": "f58768cc1a7a7e77a3bd49e98cdd21419399b6a3",
+			"revisionTime": "2018-01-03T03:42:45Z",
+			"version": "v1.2.0",
+			"versionExact": "v1.2.0"
+		},
+		{
+			"path": "golang.org/pkg/errors",
+			"revision": ""
+		}
+	],
+	"rootPath": "github.com/lnlwd/gremji"
+}
