@@ -1,4 +1,4 @@
-package main
+package gremji
 
 const (
     StatusSuccess                  = 200

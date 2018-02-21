@@ -1,4 +1,4 @@
-package main
+package gremji
 
 import (
     "github.com/satori/go.uuid"
