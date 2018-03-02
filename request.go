@@ -39,11 +39,7 @@ func Query(query QueryArgs) *Request {
         Rebindings: query.Rebindings,
     }
 
-    uid, err := uuid.NewV4()
-
-    if err != nil {
-        return nil
-    }
+    uid := uuid.NewV4()
 
     id := uid.String()
 
