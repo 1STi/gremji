@@ -33,6 +33,10 @@
   name = "github.com/satori/go.uuid"
   version = "1.2.0"
 
+[[override]]
+  name = "github.com/satori/go.uuid"
+  revision = "master"
+
 [prune]
   go-tests = true
   unused-packages = true
