@@ -35,12 +35,11 @@ func (c *Client) ExecQuery(query QueryArgs) (*Response, error) {
 }
 
 func (c *Client) Exec(req *Request) (*Response, error) {
+	requestMessage, err := GraphSONSerializer(req)
 
-    var err error
-
-    if err = c.Ws.WriteJSON(req); err != nil {
-        return nil, err
-    }
+	if err = c.Ws.WriteMessage(websocket.BinaryMessage, requestMessage); err != nil {
+		return nil, err
+	}
 
     return c.ReadResponse()
 }
